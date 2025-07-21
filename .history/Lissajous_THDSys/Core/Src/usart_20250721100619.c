@@ -21,9 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-#include <stdio.h>
-// 串口接收缓冲
-uint8_t uart_rx_buffer;
+
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -56,8 +54,7 @@ void MX_USART1_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART1_Init 2 */
-  // Enable UART receive interrupt
-  HAL_UART_Receive_IT(&huart1, &uart_rx_buffer, 1);
+
   /* USER CODE END USART1_Init 2 */
 
 }
@@ -238,87 +235,5 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
-
-/*------------- 串口服务函数---------------*/
-// 串口发送字符串函数
-void USART1_SendString(uint8_t *str)
-{
-  unsigned int k=0;
-  
-  // 发送字符串中的每个字符
-  while(*(str + k) != '\0')
-  {
-    HAL_UART_Transmit(&huart1, (uint8_t *)(str + k), 1, 1000);
-    k++;
-  }
-}
-
-// printf重定向函数 - 适配MicroLIB
-int fputc(int ch, FILE* f)
-{
-  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 1000);
-  return ch;
-}
-
-// scanf重定向函数 - 适配MicroLIB
-int fgetc(FILE* f)
-{
-  uint8_t ch;
-  HAL_UART_Receive(&huart1, &ch, 1, 1000);
-  return ch;
-}
-
-
-/**
-  * @brief  UART接收完成回调函数，处理UART1的数据接收和回传
-  * @param  huart: UART句柄指针，指向触发回调的UART实例
-  * @retval None
-  */
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-  if (huart->Instance == USART1)
-  {
-    // 先回显接收到的数
-    HAL_UART_Transmit(&huart1, (uint8_t *)&uart_rx_buffer, 1, 1000);
-    
-    // 然后重新启动接收中断，准备接收下一个字
-    HAL_UART_Receive_IT(&huart1, &uart_rx_buffer, 1);
-  }
-}
-
-
-/**
- * @brief  串口初始化函数
- * @param  Baudrate: 波特率
- * @retval None
- */
-void usart_init(uint32_t Baudrate)
-{
-    // 使用USART3作为默认串口
-    huart3.Instance = USART3;
-    huart3.Init.BaudRate = Baudrate;
-    huart3.Init.WordLength = UART_WORDLENGTH_8B;
-    huart3.Init.StopBits = UART_STOPBITS_1;
-    huart3.Init.Parity = UART_PARITY_NONE;
-    huart3.Init.Mode = UART_MODE_TX_RX;
-    huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-    huart3.Init.OverSampling = UART_OVERSAMPLING_16;
-    
-    if (HAL_UART_Init(&huart3) != HAL_OK)
-    {
-        Error_Handler();
-    }
-}
-
-/**
- * @brief  发送1个字节到串口
- * @param  t: 要发送的字节
- * @retval None
- */
-void SendChar(uint8_t t)
-{
-    USART3->DR = t;
-    while ((USART3->SR & 0x40) == 0);  // 等待发送结束
-}
 
 /* USER CODE END 1 */

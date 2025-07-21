@@ -30,7 +30,9 @@
 /* USER CODE BEGIN Includes */
 #include "./fft_hp_estimate/fft_hp_estimate.h"
 #include "./ad9833/bsp_ad9833.h"
-#include "./serial_screen/serial_screen.h"
+#include "./serial_screen/hmi_driver.h"
+#include "./serial_screen/cmd_queue.h"
+#include "./serial_screen/cmd_process.h"
 
 /* USER CODE END Includes */
 
@@ -52,6 +54,16 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
+#define TIME_100MS 10                                                                //100毫秒(10个单位)
+
+volatile uint32  timer_tick_count = 0;                                               //定时器节拍
+
+uint8  cmd_buffer[CMD_MAX_SIZE];                                                     //指令缓存
+static uint16 current_screen_id = 0;                                                 //当前画面ID
+static int32 test_value = 0;                                                         //测试值
+static uint8 update_en = 0;                                                          //更新标记
+void UpdateUI(void);                                                                 //更新UI数据
 
 /* USER CODE END PV */
 
@@ -109,7 +121,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   AD9833_Init();
   AD9833_Config(1000.0, AD9833_OUT_SINUS, 0);
-  printf("Hello World\r\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -21,9 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-#include <stdio.h>
-// ´®¿Ú½ÓÊÕ»º³å
-uint8_t uart_rx_buffer;
+
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;

@@ -109,7 +109,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   AD9833_Init();
   AD9833_Config(1000.0, AD9833_OUT_SINUS, 0);
-  printf("Hello World\r\n");
+  p r
   /* USER CODE END 2 */
 
   /* Infinite loop */

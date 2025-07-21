@@ -21,9 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-#include <stdio.h>
-// ´®¿Ú½ÓÊÕ»º³å
-uint8_t uart_rx_buffer;
+
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart1;
@@ -56,7 +54,7 @@ void MX_USART1_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART1_Init 2 */
-  // Enable UART receive interrupt
+    // Enable UART receive interrupt
   HAL_UART_Receive_IT(&huart1, &uart_rx_buffer, 1);
   /* USER CODE END USART1_Init 2 */
 

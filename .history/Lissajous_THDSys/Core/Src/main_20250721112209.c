@@ -30,7 +30,9 @@
 /* USER CODE BEGIN Includes */
 #include "./fft_hp_estimate/fft_hp_estimate.h"
 #include "./ad9833/bsp_ad9833.h"
-#include "./serial_screen/serial_screen.h"
+#include "./serial_screen/hmi_driver.h"
+#include "./serial_screen/cmd_queue.h"
+#include "./serial_screen/cmd_process.h"
 
 /* USER CODE END Includes */
 
@@ -109,7 +111,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   AD9833_Init();
   AD9833_Config(1000.0, AD9833_OUT_SINUS, 0);
-  printf("Hello World\r\n");
   /* USER CODE END 2 */
 
   /* Infinite loop */
