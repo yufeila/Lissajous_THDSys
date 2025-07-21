@@ -16,4 +16,6 @@
 
 #define TIME_100MS 10    
 
+void UpdateUI(void);                                                                 //更新UI数据
+
 #endif

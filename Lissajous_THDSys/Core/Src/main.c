@@ -56,7 +56,7 @@
 extern volatile uint32_t timer_tick_count;
 /* ´®¿ÚÆÁ»º³å Óë ½âÎö */
 extern uint8_t  cmd_buffer[CMD_MAX_SIZE]; 
-extern uint16_t size;
+uint16_t size;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
