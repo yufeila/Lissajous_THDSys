@@ -21,11 +21,11 @@ void AD9833_GPIO_Init(void)
     __HAL_RCC_GPIOC_CLK_ENABLE();
 
     // ≈‰÷√FSYNC°¢SCLK°¢SDATAŒ™Õ∆ÕÏ ‰≥ˆ
-    GPIO_InitStruct.Pin = AD9833_1_FSYNC_PIN | AD9833_1_SCLK_PIN | AD9833_1_SDATA_PIN;
+    GPIO_InitStruct.Pin = AD9833_FSYNC_PIN | AD9833_SCLK_PIN | AD9833_SDATA_PIN;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(AD9833_1_FSYNC_PORT, &GPIO_InitStruct);
+    HAL_GPIO_Init(AD9833_FSYNC_PORT, &GPIO_InitStruct);
 }
 
 /**********************************************************************************************
@@ -41,8 +41,8 @@ unsigned char AD9833_SPI_Write(unsigned char* data,unsigned char bytesNumber)
     unsigned char i, j; 
     unsigned char writeData[5] = {0, 0, 0, 0, 0};
 
-    AD9833_1_SCLK_HIGH(); 
-    AD9833_1_FSYNC_LOW();
+    AD9833_SCLK_HIGH(); 
+    AD9833_FSYNC_LOW();
 
     for(i = 0; i < bytesNumber; i++)
     {
@@ -54,17 +54,17 @@ unsigned char AD9833_SPI_Write(unsigned char* data,unsigned char bytesNumber)
         for(j = 0; j < 8; j++)      
         { 
             if(writeData[i] & 0x80) 
-                AD9833_1_SDATA_HIGH(); 
+                AD9833_SDATA_HIGH(); 
             else 
-                AD9833_1_SDATA_LOW(); 
+                AD9833_SDATA_LOW(); 
 
-            AD9833_1_SCLK_LOW(); 
+            AD9833_SCLK_LOW(); 
             writeData[i] <<= 1; 
-            AD9833_1_SCLK_HIGH(); 
+            AD9833_SCLK_HIGH(); 
         } 
     }
-    AD9833_1_SDATA_HIGH(); 
-    AD9833_1_FSYNC_HIGH(); 
+    AD9833_SDATA_HIGH(); 
+    AD9833_FSYNC_HIGH(); 
 
     return i;
 }

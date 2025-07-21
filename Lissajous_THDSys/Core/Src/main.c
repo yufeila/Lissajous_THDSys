@@ -106,6 +106,8 @@ int main(void)
   MX_ADC3_Init();
   MX_DAC_Init();
   MX_TIM3_Init();
+  MX_TIM4_Init();
+  MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
   AD9833_Init();
   AD9833_Config(1000.0, AD9833_OUT_SINUS, 0);

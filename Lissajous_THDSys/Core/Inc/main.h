@@ -83,6 +83,8 @@ void Error_Handler(void);
 #define RELAY_GPIO_Port GPIOB
 #define LCD_BK_Pin GPIO_PIN_15
 #define LCD_BK_GPIO_Port GPIOB
+#define SQUARE_CAP_Pin GPIO_PIN_12
+#define SQUARE_CAP_GPIO_Port GPIOD
 #define AD9851_RESET_Pin GPIO_PIN_4
 #define AD9851_RESET_GPIO_Port GPIOB
 #define AD9851_BIT_DATA_Pin GPIO_PIN_5

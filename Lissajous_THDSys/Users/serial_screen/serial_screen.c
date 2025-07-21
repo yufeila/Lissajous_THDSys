@@ -132,7 +132,7 @@ void NotifyScreen(uint16 screen_id)
         Record_SetEvent(15,1,5,0);
         Record_SetEvent(15,1,6,0);
         Record_SetEvent(15,1,7,0);
-        delay_ms(2000);                                                              //延时两秒
+        HAL_Delay(2000);                                                              //延时两秒
         Record_ResetEvent(15,1,0,0);
         Record_ResetEvent(15,1,1,0);
         Record_ResetEvent(15,1,2,0);

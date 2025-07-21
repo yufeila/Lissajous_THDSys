@@ -1,6 +1,7 @@
 #include "./fft_hp_estimate/fft_hp_estimate.h"
 #include "usart.h"
 #include <stdio.h>
+#include <math.h>
 
 static float      win[N_RAW];          // Hann(n)
 static float      buf[N_FFT];          // FFT 输入 & 输出共用

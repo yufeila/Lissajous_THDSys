@@ -13,7 +13,7 @@
 #include "tim.h"
 
 
-#define N_RAW      FFT_SIZE                /* 真实采样点2048, 在adc.h中设置 */
+#define N_RAW      2048                /* 真实采样点2048, 在adc.h中设置 */
 #define Z_FACTOR   2u                   /* 补零倍率                 */
 #define N_FFT      (N_RAW * Z_FACTOR)   /* FFT 点数 (必须2的幂)     */
 #define PSC         (TIM2-> PSC)
@@ -25,6 +25,9 @@
 #define ADC_LSB_VOLT            0.0008058f  /* ADC的LSB电压值 (3.3V / 4096 = 0.0008058V)  */
 #define HANN_CG   0.5f      /* Hann 窗的 **coherent gain** = 0.5；用于幅值还原 */
 
+#ifndef MIN
+#define MIN(A,B) ((A) < (B) ? (A) : (B))
+#endif
 
 /* 方波失真度分析结果结构体 */
 typedef struct {
