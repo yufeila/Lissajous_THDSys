@@ -31,7 +31,7 @@
 #include "./fft_hp_estimate/fft_hp_estimate.h"
 #include "./ad9833/bsp_ad9833.h"
 #include "./serial_screen/serial_screen.h"
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +53,7 @@
 
 /* USER CODE BEGIN PV */
 /* 全局时间节拍，每 10ms +1 */
-volatile uint32_t timer_tick_count = 0;
+extern volatile uint32_t timer_tick_count;
 /* 串口屏缓冲 与 解析 */
 extern uint8_t  cmd_buffer[CMD_MAX_SIZE]; 
 extern uint16_t size;

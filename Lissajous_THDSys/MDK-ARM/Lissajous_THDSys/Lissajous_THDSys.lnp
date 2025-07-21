@@ -41,6 +41,7 @@
 "lissajous_thdsys\cmd_queue.o"
 "lissajous_thdsys\hmi_driver.o"
 "lissajous_thdsys\serial_screen.o"
+"lissajous_thdsys\duty_set.o"
 "..\Middlewares\ST\ARM\DSP\Lib\arm_cortexM4lf_math.lib"
 --library_type=microlib --strict --scatter "Lissajous_THDSys\Lissajous_THDSys.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

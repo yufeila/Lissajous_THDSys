@@ -1,6 +1,6 @@
 #include "./serial_screen/serial_screen.h"
 
-#define TIME_100MS 10                                                                //100毫秒(10个单位)
+                                                            //100毫秒(10个单位)
 
 
 /* 页面／控件 ID 定义 */

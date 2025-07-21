@@ -283,6 +283,6 @@ void MeasureTHD(float * thd_value)
     adc_zero_bias(src, adc_zeroed, N_RAW);
     fft_tdh_hann(adc_zeroed, &out);
 
-    *thd_value = out->thd_percent;
+    *thd_value = out.thd_percent;
 
 }

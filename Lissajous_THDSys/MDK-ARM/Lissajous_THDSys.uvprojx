@@ -649,10 +649,17 @@
               <FileType>5</FileType>
               <FilePath>..\Users\serial_screen\serial_screen.h</FilePath>
             </File>
+            <File>
+              <FileName>duty_set.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Users\duty\duty_set.c</FilePath>
+            </File>
+            <File>
+              <FileName>duty_set.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Users\duty\duty_set.h</FilePath>
+            </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
           <GroupName>Middlewares/Library/DSP Library/DSP Library</GroupName>
@@ -751,6 +758,9 @@
               </FileOption>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>

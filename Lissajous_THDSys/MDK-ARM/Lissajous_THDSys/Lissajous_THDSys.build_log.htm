@@ -27,21 +27,6 @@ Project File Date:  07/21/2025
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
 Build target 'Lissajous_THDSys'
-assembling startup_stm32f407xx.s...
-compiling armlib_lock_glue.c...
-armlib_lock_glue.c(44): warning:  #1215-D: #warning directive: Microlib does not provide mutex locks to guard against code that is not thread safe
-  #warning Microlib does not provide mutex locks to guard against code that is not thread safe
-armlib_lock_glue.c: 1 warning, 0 errors
-compiling stm32f4xx_it.c...
-compiling tim.c...
-compiling dma.c...
-compiling stm32f4xx_hal_msp.c...
-compiling gpio.c...
-compiling dac.c...
-compiling fsmc.c...
-compiling adc.c...
-compiling usart.c...
-compiling stm32f4xx_hal_adc.c...
 compiling main.c...
 ../Users/./serial_screen/hmi_driver.h(73): warning:  #1295-D: Deprecated declaration GUI_CleanScreen - give arg types
   void GUI_CleanScreen();
@@ -55,117 +40,17 @@ compiling main.c...
   void BatchEnd();
 ../Users/./serial_screen/hmi_driver.h(706): warning:  #1295-D: Deprecated declaration FlashEndSaveControl - give arg types
   void FlashEndSaveControl();
-../Users/./serial_screen/serial_screen.h(17): warning:  #1-D: last line of file ends without a newline
+../Users/./serial_screen/serial_screen.h(19): warning:  #1-D: last line of file ends without a newline
   #endif
-../Core/Src/main.c(114): warning:  #223-D: function "printf" declared implicitly
-    printf("Hello World\r\n");
+../Core/Src/main.c(135): warning:  #223-D: function "UpdateUI" declared implicitly
+            UpdateUI();
 ../Core/Src/main.c: 8 warnings, 0 errors
-compiling stm32f4xx_ll_adc.c...
-compiling stm32f4xx_hal_adc_ex.c...
-compiling stm32f4xx_hal_pwr_ex.c...
-compiling stm32f4xx_hal_pwr.c...
-compiling stm32f4xx_hal_dma_ex.c...
-compiling stm32f4xx_hal_gpio.c...
-compiling stm32f4xx_hal_flash_ramfunc.c...
-compiling stm32f4xx_hal_flash_ex.c...
-compiling stm32f4xx_hal_dma.c...
-compiling stm32f4xx_hal_flash.c...
-compiling stm32f4xx_hal_cortex.c...
-compiling stm32f4xx_hal_rcc.c...
-compiling stm32f4xx_hal_rcc_ex.c...
-compiling stm32f4xx_hal.c...
-compiling stm32f4xx_hal_exti.c...
-compiling stm32f4xx_hal_dac.c...
-compiling stm32f4xx_hal_sram.c...
-compiling system_stm32f4xx.c...
-compiling bsp_ad9833.c...
-..\Users\ad9833\bsp_ad9833.c(222): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-      uint32_t freq = (uint32_t)(fout * 268435456.0 / FCLK); // 28-bit
-..\Users\ad9833\bsp_ad9833.c: 1 warning, 0 errors
-compiling key.c...
-compiling fft_hp_estimate.c...
-..\Users\fft_hp_estimate\fft_hp_estimate.c(19): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-              win[n] = 0.5f * (1.0f - cosf(2.0f * PI_F * n / (N_RAW-1)));
-..\Users\fft_hp_estimate\fft_hp_estimate.c: 1 warning, 0 errors
-compiling stm32f4xx_hal_dac_ex.c...
-compiling stm32f4xx_hal_tim_ex.c...
-compiling stm32f4xx_ll_fsmc.c...
-compiling stm32f4xx_hal_uart.c...
-compiling cmd_queue.c...
-..\Users\serial_screen\hmi_driver.h(73): warning:  #1295-D: Deprecated declaration GUI_CleanScreen - give arg types
-  void GUI_CleanScreen();
-..\Users\serial_screen\hmi_driver.h(270): warning:  #1295-D: Deprecated declaration CalibrateTouchPane - give arg types
-  void	CalibrateTouchPane();
-..\Users\serial_screen\hmi_driver.h(275): warning:  #1295-D: Deprecated declaration TestTouchPane - give arg types
-  void TestTouchPane();
-..\Users\serial_screen\hmi_driver.h(336): warning:  #1295-D: Deprecated declaration GetScreen - give arg types
-  void GetScreen();
-..\Users\serial_screen\hmi_driver.h(610): warning:  #1295-D: Deprecated declaration BatchEnd - give arg types
-  void BatchEnd();
-..\Users\serial_screen\hmi_driver.h(706): warning:  #1295-D: Deprecated declaration FlashEndSaveControl - give arg types
-  void FlashEndSaveControl();
-..\Users\serial_screen\cmd_queue.c(102): warning:  #1-D: last line of file ends without a newline
-  }
-..\Users\serial_screen\cmd_queue.c: 7 warnings, 0 errors
-compiling stm32f4xx_hal_tim.c...
-compiling hmi_driver.c...
-..\Users\serial_screen\hmi_driver.h(73): warning:  #1295-D: Deprecated declaration GUI_CleanScreen - give arg types
-  void GUI_CleanScreen();
-..\Users\serial_screen\hmi_driver.h(270): warning:  #1295-D: Deprecated declaration CalibrateTouchPane - give arg types
-  void	CalibrateTouchPane();
-..\Users\serial_screen\hmi_driver.h(275): warning:  #1295-D: Deprecated declaration TestTouchPane - give arg types
-  void TestTouchPane();
-..\Users\serial_screen\hmi_driver.h(336): warning:  #1295-D: Deprecated declaration GetScreen - give arg types
-  void GetScreen();
-..\Users\serial_screen\hmi_driver.h(610): warning:  #1295-D: Deprecated declaration BatchEnd - give arg types
-  void BatchEnd();
-..\Users\serial_screen\hmi_driver.h(706): warning:  #1295-D: Deprecated declaration FlashEndSaveControl - give arg types
-  void FlashEndSaveControl();
-..\Users\serial_screen\hmi_driver.c(2000): warning:  #1-D: last line of file ends without a newline
-  }
-..\Users\serial_screen\hmi_driver.c: 7 warnings, 0 errors
-compiling serial_screen.c...
-../Users/./serial_screen/hmi_driver.h(73): warning:  #1295-D: Deprecated declaration GUI_CleanScreen - give arg types
-  void GUI_CleanScreen();
-../Users/./serial_screen/hmi_driver.h(270): warning:  #1295-D: Deprecated declaration CalibrateTouchPane - give arg types
-  void	CalibrateTouchPane();
-../Users/./serial_screen/hmi_driver.h(275): warning:  #1295-D: Deprecated declaration TestTouchPane - give arg types
-  void TestTouchPane();
-../Users/./serial_screen/hmi_driver.h(336): warning:  #1295-D: Deprecated declaration GetScreen - give arg types
-  void GetScreen();
-../Users/./serial_screen/hmi_driver.h(610): warning:  #1295-D: Deprecated declaration BatchEnd - give arg types
-  void BatchEnd();
-../Users/./serial_screen/hmi_driver.h(706): warning:  #1295-D: Deprecated declaration FlashEndSaveControl - give arg types
-  void FlashEndSaveControl();
-../Users/./serial_screen/serial_screen.h(17): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Users\serial_screen\serial_screen.c(146): warning:  #223-D: function "PlayMusic" declared implicitly
-          PlayMusic(buffer);                                                           //播放音乐
-..\Users\serial_screen\serial_screen.c(316): warning:  #1-D: last line of file ends without a newline
-  }
-..\Users\serial_screen\serial_screen.c(300): warning:  #550-D: variable "years"  was set but never used
-      uint8 years;
-..\Users\serial_screen\serial_screen.c(301): warning:  #550-D: variable "months"  was set but never used
-      uint8 months;
-..\Users\serial_screen\serial_screen.c(302): warning:  #550-D: variable "weeks"  was set but never used
-      uint8 weeks;
-..\Users\serial_screen\serial_screen.c(303): warning:  #550-D: variable "days"  was set but never used
-      uint8 days;
-..\Users\serial_screen\serial_screen.c(304): warning:  #550-D: variable "hours"  was set but never used
-      uint8 hours;
-..\Users\serial_screen\serial_screen.c(305): warning:  #550-D: variable "minutes"  was set but never used
-      uint8 minutes;
-..\Users\serial_screen\serial_screen.c(306): warning:  #550-D: variable "sec"  was set but never used
-      uint8 sec;
-..\Users\serial_screen\serial_screen.c(9): warning:  #177-D: variable "test_value"  was declared but never referenced
-  static int32 test_value = 0;                                                         //测试值
-..\Users\serial_screen\serial_screen.c(10): warning:  #177-D: variable "update_en"  was declared but never referenced
-  static uint8 update_en = 0;                                                          //更新标记
-..\Users\serial_screen\serial_screen.c: 18 warnings, 0 errors
 linking...
-Program Size: Code=23540 RO-data=464 RW-data=32 ZI-data=2232  
-FromELF: creating hex file...
-"Lissajous_THDSys\Lissajous_THDSys.axf" - 0 Error(s), 43 Warning(s).
+Lissajous_THDSys\Lissajous_THDSys.axf: Error: L6218E: Undefined symbol size (referred from main.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 1 error messages.
+"Lissajous_THDSys\Lissajous_THDSys.axf" - 1 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -188,7 +73,8 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE@6.1.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:06:43
+Target not created.
+Build Time Elapsed:  00:00:10
 </pre>
 </body>
 </html>

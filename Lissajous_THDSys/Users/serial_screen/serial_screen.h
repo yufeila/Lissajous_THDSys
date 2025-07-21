@@ -14,4 +14,6 @@
 #include "./serial_screen/cmd_queue.h"
 #include "./serial_screen/cmd_process.h"
 
+#define TIME_100MS 10    
+
 #endif

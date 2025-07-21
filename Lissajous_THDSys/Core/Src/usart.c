@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
+#include "./serial_screen/cmd_queue.h"
 
 /* USER CODE BEGIN 0 */
 #include <stdio.h>
@@ -296,29 +297,15 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
     if (huart->Instance == USART3)
     {
-        uint16_t deg_tmp;
-
-        /* 
-         * get_message()：你自己的帧解析函数，
-         * 返回 true 代表本次 rxBuffer[0..Size-1] 里有一条完整指令，
-         * 并把有效数据（如占空比）写到 deg_tmp
-         */
-        if (get_message(rxBuf, Size, &deg_tmp))
-        {
-            /* 存储解析结果，置位主循环可见的标志 */
-            phase_config.phi_deg = deg_tmp;
-            g_phase_valid        = 1;
-
-            /* （可选）回应一回数据给屏，测试用 */
-            HAL_UART_Transmit_DMA(&huart3, rxBuf, Size);
-        }
-
-        /* 
-         * 再次开启下次接收 —— 
-         * 注意：要用同一个 rxBuffer，大小也保持不变 
-         */
+		for(uint16_t i = 0; i < Size ;++i )
+		{
+			queue_push(rxBuf[i]);
+		}
+		
+		// 重新启动DMA+IDLE接收
         HAL_UARTEx_ReceiveToIdle_DMA(&huart3, rxBuf, sizeof(rxBuf));
-        __HAL_DMA_DISABLE_IT(huart3.hdmarx, DMA_IT_HT);
+		/* 禁用半传输中断，避免触发两次 RxEventCallback */
+		__HAL_DMA_DISABLE_IT(huart3.hdmarx, DMA_IT_HT);
     }
 }
 

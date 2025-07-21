@@ -39,3 +39,10 @@ lissajous_thdsys\adc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex
 lissajous_thdsys\adc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lissajous_thdsys\adc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lissajous_thdsys\adc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+lissajous_thdsys\adc.o: ../Users/./fft_hp_estimate/fft_hp_estimate.h
+lissajous_thdsys\adc.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
+lissajous_thdsys\adc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
+lissajous_thdsys\adc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
+lissajous_thdsys\adc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\float.h
+lissajous_thdsys\adc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\limits.h
+lissajous_thdsys\adc.o: ../Core/Inc/tim.h
