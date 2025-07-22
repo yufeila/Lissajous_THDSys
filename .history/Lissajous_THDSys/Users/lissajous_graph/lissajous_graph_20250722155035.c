@@ -49,9 +49,9 @@ void Lissajous_Graph_Display(uint16_t state)
     static uint8_t frame_skip = 0;
     if(state != 1) return;
 
-		printf("Display Loop: head=%u, tail=%u\r\n", head, tail);
+		// printf("Display Loop: head=%u, tail=%u\r\n", head, tail);
 
-    while (tail != head)
+    if (tail != head)
     {
         uint8_t which = buf_ready_q[tail];
         tail = (tail + 1) & 3;
@@ -158,22 +158,4 @@ void Phase_Detect(float *phase_val)
 DONE:
     /* 标记本帧已消费，让后续绘图 / 检测处理下一帧 */
     tail = (tail + 1) & 3;
-}
-
-void Lissajous_Graph_Test(void)
-{
-    /* 只取 20 个测试点作验证 */
-    uint16_t test_xy[40] = {
-        250,300, 300,350, 350,400, 400,450, 450,500,
-        500,550, 550,500, 600,450, 650,400, 700,350,
-        750,300, 800,250, 850,200, 900,150, 950,100,
-        1000,50, 900,50, 800,50, 700,50, 600,50
-    };
-
-    SetScreenUpdateEnable(0);
-    SetFcolor(0xFFE0);               // 黄色
-    GUI_RectangleFill(250,30,1000,570);
-    SetFcolor(0xF800);               // 红色
-    GUI_ConDots(1, test_xy, 20);     // mode=1 只画点
-    SetScreenUpdateEnable(1);
 }
