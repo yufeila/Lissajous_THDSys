@@ -444,6 +444,51 @@
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f4xx_hal_msp.c</FilePath>
             </File>
+            <File>
+              <FileName>adc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\adc.h</FilePath>
+            </File>
+            <File>
+              <FileName>dac.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\dac.h</FilePath>
+            </File>
+            <File>
+              <FileName>dma.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\dma.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\main.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\stm32f4xx_hal_conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\stm32f4xx_it.h</FilePath>
+            </File>
+            <File>
+              <FileName>tim.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\tim.h</FilePath>
+            </File>
+            <File>
+              <FileName>usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Inc\usart.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

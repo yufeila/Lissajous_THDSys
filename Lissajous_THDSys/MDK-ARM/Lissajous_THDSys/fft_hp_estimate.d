@@ -43,6 +43,6 @@ lissajous_thdsys\fft_hp_estimate.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4x
 lissajous_thdsys\fft_hp_estimate.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lissajous_thdsys\fft_hp_estimate.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lissajous_thdsys\fft_hp_estimate.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+lissajous_thdsys\fft_hp_estimate.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 lissajous_thdsys\fft_hp_estimate.o: ../Core/Inc/usart.h
 lissajous_thdsys\fft_hp_estimate.o: ../Core/Inc/adc.h
-lissajous_thdsys\fft_hp_estimate.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h

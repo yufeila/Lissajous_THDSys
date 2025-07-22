@@ -30,6 +30,7 @@ extern "C" {
 
 /* USER CODE BEGIN Includes */
 #include "./fft_hp_estimate/fft_hp_estimate.h"
+#include <stdio.h>
 
 /* USER CODE END Includes */
 

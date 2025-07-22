@@ -44,6 +44,7 @@ lissajous_thdsys\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
 lissajous_thdsys\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\float.h
 lissajous_thdsys\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\limits.h
 lissajous_thdsys\main.o: ../Core/Inc/tim.h
+lissajous_thdsys\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 lissajous_thdsys\main.o: ../Core/Inc/dac.h
 lissajous_thdsys\main.o: ../Core/Inc/dma.h
 lissajous_thdsys\main.o: ../Core/Inc/usart.h
@@ -54,4 +55,3 @@ lissajous_thdsys\main.o: ../Users/./serial_screen/hmi_driver.h
 lissajous_thdsys\main.o: ../Users/./serial_screen/cmd_queue.h
 lissajous_thdsys\main.o: ../Users/./serial_screen/cmd_process.h
 lissajous_thdsys\main.o: ../Users/./lissajous_graph/lissajous_graph.h
-lissajous_thdsys\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h

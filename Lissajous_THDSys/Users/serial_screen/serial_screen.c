@@ -30,12 +30,12 @@ volatile uint32  timer_tick_count = 0;                                          
 
 uint8  cmd_buffer[CMD_MAX_SIZE];                                                     //指令缓存
 static uint16 current_screen_id = 0;                                                 //当前画面ID
-static int32 test_value = 0;                                                         //测试值
-static uint8 update_en = 0;                                                          //更新标记
+//static int32 test_value = 0;                                                         //测试值
+//static uint8 update_en = 0;                                                          //更新标记
 void UpdateUI(void);                                                                 //更新UI数据
 
 /* MCU 端存储的占空比设置值 */
-static uint16_t duty_set = 0;
+//static uint16_t duty_set = 0;
 static uint8 phase_detect_request = 0;
 
 /*! 

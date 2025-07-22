@@ -44,3 +44,4 @@ lissajous_thdsys\adc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
 lissajous_thdsys\adc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\float.h
 lissajous_thdsys\adc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\limits.h
 lissajous_thdsys\adc.o: ../Core/Inc/tim.h
+lissajous_thdsys\adc.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -42,6 +42,7 @@ lissajous_thdsys\lissajous_graph.o: ../Core/Inc/main.h
 lissajous_thdsys\lissajous_graph.o: ../Users/./serial_screen/cmd_queue.h
 lissajous_thdsys\lissajous_graph.o: ../Users/./serial_screen/cmd_process.h
 lissajous_thdsys\lissajous_graph.o: ../Core/Inc/tim.h
+lissajous_thdsys\lissajous_graph.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 lissajous_thdsys\lissajous_graph.o: ../Core/Inc/adc.h
 lissajous_thdsys\lissajous_graph.o: ../Users/./fft_hp_estimate/fft_hp_estimate.h
 lissajous_thdsys\lissajous_graph.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h

@@ -267,7 +267,7 @@ void MeasureTHD(float * thd_value)
         HAL_Delay(1);  // 短暂延时，避免CPU占用过高
         timeout++;
         if (timeout % 100 == 0) {
-            printf("MeasureTHD: Waiting... timeout=%lu, flag=%d\r\n", timeout, ADC3_BufferReadyFlag);
+            printf("MeasureTHD: Waiting... timeout=%lu, flag=%d\r\n", (unsigned long)timeout, ADC3_BufferReadyFlag);
         }
     }
 
@@ -282,7 +282,7 @@ void MeasureTHD(float * thd_value)
         return;
     }
     
-    printf("MeasureTHD: Data ready after %lu ms\r\n", timeout);
+    printf("MeasureTHD: Data ready after %lu ms\r\n", (unsigned long)timeout);
 
     // 4. 停止当前轮次的ADC+TIM（为下次启动做准备）
     HAL_ADC_Stop_DMA(&hadc3);
