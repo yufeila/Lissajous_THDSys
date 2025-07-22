@@ -285,7 +285,6 @@ void MeasureTHD(float * thd_value)
 
     *thd_value = out.thd_percent;
 
-    printf("MeasureTHD: THD = %.2f%%\r\n", out.thd_percent);
-    printf("\r\n");
+    
 
 }

@@ -11,7 +11,6 @@ extern float duty; // tim.c 里定义的
 
 void SetDuty(uint16_t duty)
 {
-    printf("SetDuty: duty = %.2f%%\r\n", duty);
     float fduty = (float)duty / 100.0f;
     float Vref = DDS_OUT_VPP * (1 - fduty);
 
