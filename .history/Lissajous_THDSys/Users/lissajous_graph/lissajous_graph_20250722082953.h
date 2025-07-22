@@ -31,13 +31,6 @@ typedef struct {
 #define ADC_RESOLUTION       4096.0f // 分辨率
 #define UPDATE_INTERVAL      1     // 更新间隔，单位：帧
 
-/* 全局变量声明 */
-extern uint16_t lissajous_graph_state;
-extern uint16_t adc_buf[2][200 * 2]; // [0]和[1]为Ping-Pong缓冲
-extern volatile uint8_t buf_ready_q[4];   // 简单环形队列
-extern volatile uint8_t head;
-extern volatile uint8_t tail;
-
 
 
 void Lissajous_Graph_Start(void);

@@ -2,7 +2,6 @@
 #include "./lissajous_graph/lissajous_graph.h"
 #include "./duty/duty_set.h"
 #include "./fft_hp_estimate/fft_hp_estimate.h"
-#include "./ppl/ppl.h"
 #include <stdio.h>
 
                                                             //100ºÁÃë(10¸öµ¥Î»)

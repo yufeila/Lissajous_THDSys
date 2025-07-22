@@ -336,12 +336,6 @@ void SetScreen(uint16 screen_id);
 void GetScreen(void);
 
 /*! 
- *  \brief      播放音乐
- *  \param      buffer 十六进制的音乐路径及名字
- */
-void PlayMusic(uint8 *buffer);
-
-/*! 
  *  \brief     禁用\启用画面更新
  *  \details 禁用\启用一般成对使用，用于避免闪烁、提高刷新速度
  *  \details 用法：
