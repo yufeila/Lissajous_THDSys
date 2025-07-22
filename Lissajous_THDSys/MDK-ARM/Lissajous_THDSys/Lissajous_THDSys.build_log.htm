@@ -27,55 +27,11 @@ Project File Date:  07/22/2025
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
 Build target 'Lissajous_THDSys'
-compiling serial_screen.c...
-..\Users\serial_screen\serial_screen.c(290): warning:  #181-D: argument is incompatible with corresponding format string conversion
-          sscanf((const char*)str, "%d", &ppl_value);
-..\Users\serial_screen\serial_screen.c(399): warning:  #550-D: variable "years"  was set but never used
-      uint8 years;
-..\Users\serial_screen\serial_screen.c(400): warning:  #550-D: variable "months"  was set but never used
-      uint8 months;
-..\Users\serial_screen\serial_screen.c(401): warning:  #550-D: variable "weeks"  was set but never used
-      uint8 weeks;
-..\Users\serial_screen\serial_screen.c(402): warning:  #550-D: variable "days"  was set but never used
-      uint8 days;
-..\Users\serial_screen\serial_screen.c(403): warning:  #550-D: variable "hours"  was set but never used
-      uint8 hours;
-..\Users\serial_screen\serial_screen.c(404): warning:  #550-D: variable "minutes"  was set but never used
-      uint8 minutes;
-..\Users\serial_screen\serial_screen.c(405): warning:  #550-D: variable "sec"  was set but never used
-      uint8 sec;
-..\Users\serial_screen\serial_screen.c: 8 warnings, 0 errors
-compiling duty_set.c...
-..\Users\duty\duty_set.c(16): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-      float Vref = DDS_OUT_VPP * (1 - fduty);
-..\Users\duty\duty_set.c: 1 warning, 0 errors
-compiling lissajous_graph.c...
-..\Users\lissajous_graph\lissajous_graph.c(104): warning:  #546-D: transfer of control bypasses initialization of:
-            variable "idx_y1"  (declared at line 107)
-            variable "idx_y2"  (declared at line 116)
-            variable "diff"  (declared at line 125)
-            variable "period"  (declared at line 126)
-      if (idx_x1 < 0) goto DONE;  // 本帧未找到 X 上升
-                      ^
-..\Users\lissajous_graph\lissajous_graph.c(113): warning:  #546-D: transfer of control bypasses initialization of:
-            variable "idx_y2"  (declared at line 116)
-            variable "diff"  (declared at line 125)
-            variable "period"  (declared at line 126)
-      if (idx_y1 < 0) goto DONE;  // 本帧未找到 Y 上升
-                      ^
-..\Users\lissajous_graph\lissajous_graph.c(122): warning:  #546-D: transfer of control bypasses initialization of:
-            variable "diff"  (declared at line 125)
-            variable "period"  (declared at line 126)
-      if (idx_y2 < 0) goto DONE;  // 本帧未找到完整周期
-                      ^
-..\Users\lissajous_graph\lissajous_graph.c(136): warning:  #1-D: last line of file ends without a newline
-  }
-..\Users\lissajous_graph\lissajous_graph.c: 4 warnings, 0 errors
-compiling main.c...
+compiling tim.c...
 linking...
-Program Size: Code=40244 RO-data=120492 RW-data=4172 ZI-data=36996  
+Program Size: Code=40184 RO-data=120492 RW-data=4172 ZI-data=36996  
 FromELF: creating hex file...
-"Lissajous_THDSys\Lissajous_THDSys.axf" - 0 Error(s), 13 Warning(s).
+"Lissajous_THDSys\Lissajous_THDSys.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -98,7 +54,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE@6.1.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Build Time Elapsed:  00:02:18
+Build Time Elapsed:  00:00:08
 </pre>
 </body>
 </html>

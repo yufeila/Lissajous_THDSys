@@ -449,7 +449,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
         if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2) // 先捕获高电平宽度
         {
             PWM_FallingCount = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_2);
-            printf("TIM4 CH2 (Falling): %d\r\n", PWM_FallingCount);
+            //printf("TIM4 CH2 (Falling): %d\r\n", PWM_FallingCount);
         }
         else if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1) // 再捕获周期
         {
@@ -458,7 +458,7 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
                 duty = (float)PWM_FallingCount / PWM_RisingCount;
             else
                 duty = 0;
-            printf("TIM4 CH1 (Rising): %d, Duty: %.2f%%\r\n", PWM_RisingCount, duty * 100.0f);
+            //printf("TIM4 CH1 (Rising): %d, Duty: %.2f%%\r\n", PWM_RisingCount, duty * 100.0f);
         }
     }
 }
