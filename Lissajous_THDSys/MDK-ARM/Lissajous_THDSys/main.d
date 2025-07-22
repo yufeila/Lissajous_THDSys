@@ -53,4 +53,5 @@ lissajous_thdsys\main.o: ../Users/./serial_screen/serial_screen.h
 lissajous_thdsys\main.o: ../Users/./serial_screen/hmi_driver.h
 lissajous_thdsys\main.o: ../Users/./serial_screen/cmd_queue.h
 lissajous_thdsys\main.o: ../Users/./serial_screen/cmd_process.h
+lissajous_thdsys\main.o: ../Users/./lissajous_graph/lissajous_graph.h
 lissajous_thdsys\main.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h

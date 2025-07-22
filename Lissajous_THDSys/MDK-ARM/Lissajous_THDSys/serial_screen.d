@@ -41,3 +41,16 @@ lissajous_thdsys\serial_screen.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_
 lissajous_thdsys\serial_screen.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lissajous_thdsys\serial_screen.o: ../Users/./serial_screen/cmd_queue.h
 lissajous_thdsys\serial_screen.o: ../Users/./serial_screen/cmd_process.h
+lissajous_thdsys\serial_screen.o: ../Users/./lissajous_graph/lissajous_graph.h
+lissajous_thdsys\serial_screen.o: ../Core/Inc/tim.h
+lissajous_thdsys\serial_screen.o: ../Core/Inc/adc.h
+lissajous_thdsys\serial_screen.o: ../Users/./fft_hp_estimate/fft_hp_estimate.h
+lissajous_thdsys\serial_screen.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
+lissajous_thdsys\serial_screen.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
+lissajous_thdsys\serial_screen.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
+lissajous_thdsys\serial_screen.o: D:\Keil5\ARM\ARMCC\Bin\..\include\float.h
+lissajous_thdsys\serial_screen.o: D:\Keil5\ARM\ARMCC\Bin\..\include\limits.h
+lissajous_thdsys\serial_screen.o: ../Users/./duty/duty_set.h
+lissajous_thdsys\serial_screen.o: ../Users/./ad9833/bsp_ad9833.h
+lissajous_thdsys\serial_screen.o: ../Users/./ppl/ppl.h
+lissajous_thdsys\serial_screen.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h

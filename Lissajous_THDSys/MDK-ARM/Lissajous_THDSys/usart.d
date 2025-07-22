@@ -38,3 +38,5 @@ lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lissajous_thdsys\usart.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+lissajous_thdsys\usart.o: ../Users/../Users/serial_screen/cmd_queue.h
+lissajous_thdsys\usart.o: ../Users/../Users/serial_screen/hmi_driver.h

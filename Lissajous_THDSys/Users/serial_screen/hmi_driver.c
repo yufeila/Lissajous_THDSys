@@ -822,7 +822,7 @@ void ReadUserFlash(uint32 startAddress,uint16 length)
 /*!
 *  \brief      获取当前画面
 */
-void GetScreen(uint16 screen_id)
+void GetScreen(void)
 {
     BEGIN_CMD();
     TX_8(0xB1);
