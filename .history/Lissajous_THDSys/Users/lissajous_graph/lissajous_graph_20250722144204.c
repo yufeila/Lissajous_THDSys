@@ -67,9 +67,6 @@ void Lissajous_Graph_Display(uint16_t state)
             // 用RGB(255,255,204)填充Lissajous区域
             uint16_t bg_color = ((255 >> 3) << 11) | ((255 >> 2) << 5) | (204 >> 3); // RGB565
             GUI_FillRect(X_SCREEN_MIN, Y_SCREEN_MIN, X_SCREEN_MAX, Y_SCREEN_MAX, bg_color);
-            // 设置折线颜色为黑色
-            GUI_SetFcolor(0x0000);
-            // 画折线
             GUI_ConDots(0, dot_xy, N_POINTS);
         }
     }
