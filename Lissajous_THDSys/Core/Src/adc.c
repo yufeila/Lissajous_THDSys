@@ -385,7 +385,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
   if(hadc->Instance == ADC1)
   {
-      buf_ready_q[head] = 0; // 0=Ç°°ë»º³å
+      buf_ready_q[head] = 1; // 1=ºó°ë»º³å
       head = (head + 1) & 3;
   }
   else if(hadc->Instance == ADC3)
@@ -394,11 +394,11 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
   }
 }
 
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
+void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)
 {
     if (hadc->Instance == ADC1)
     {
-        buf_ready_q[head] = 1; // 1=ºó°ë»º³å
+        buf_ready_q[head] = 0; // 0=Ç°°ë»º³å
         head = (head + 1) & 3;
     }
 }
