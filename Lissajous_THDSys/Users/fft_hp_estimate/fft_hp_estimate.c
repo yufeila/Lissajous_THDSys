@@ -252,13 +252,6 @@ void MeasureTHD(float * thd_value)
 {
     printf("MeasureTHD: Starting...\r\n");
     
-    // 临时跳过复杂的FFT计算，直接返回测试值
-    *thd_value = 5.0f;  // 返回5%作为测试值
-    printf("MeasureTHD: Returning test value 5.0%%\r\n");
-    printf("\r\n");
-    return;
-    
-    /* 以下代码临时注释掉
     thd_result_t out;
     
     // 1. 启动本轮ADC+DMA+TIM采集（彻底修复启动时序）
@@ -321,6 +314,5 @@ void MeasureTHD(float * thd_value)
 
     printf("MeasureTHD: THD = %.2f%%\r\n", out.thd_percent);
     printf("\r\n");
-    */
 
 }

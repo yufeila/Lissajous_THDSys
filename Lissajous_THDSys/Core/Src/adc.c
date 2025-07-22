@@ -390,7 +390,7 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
   }
   else if(hadc->Instance == ADC3)
   {
-    printf("ADC3 DMA Complete!\r\n");
+    //printf("ADC3 DMA Complete!\r\n");
     ADC3_BufferReadyFlag = BUFFER_READY_FLAG_FULL;
   }
 }
