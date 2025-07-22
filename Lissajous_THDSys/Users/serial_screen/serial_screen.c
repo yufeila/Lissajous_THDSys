@@ -129,13 +129,6 @@ void NotifyScreen(uint16 screen_id)
     //TODO: 添加用户代码
     current_screen_id = screen_id;                                                   //在工程配置中开启画面切换通知，记录当前画面ID
 
-    // 切换到李萨如页面时，调用测试函数
-    if (screen_id == PAGE_LISSAJOUS)
-    {
-        Lissajous_Graph_Stop(); // 先停止实时绘图，防止测试画面被覆盖
-        Lissajous_Graph_Test();
-    }
-
     //进到画面3亮起一个按钮
     if(screen_id == 3)
     {

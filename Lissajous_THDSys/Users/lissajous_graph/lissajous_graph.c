@@ -49,38 +49,28 @@ void Lissajous_Graph_Display(uint16_t state)
     static uint8_t frame_skip = 0;
     if(state != 1) return;
 
-		printf("Display Loop: head=%u, tail=%u\r\n", head, tail);
-
-    while (tail != head)
+    // 关键改动：将 while 改为 if，避免指令风暴
+    if (tail != head)
     {
         uint8_t which = buf_ready_q[tail];
         tail = (tail + 1) & 3;
 
         uint16_t *p = (which == 0) ? adc_buf[0] : adc_buf[1];
         /* 数组已移至外部，此处不再需要定义 */
-        // uint16_t dot_xy[N_POINTS * 2];
-        // lissajous_point_t points[N_POINTS];
 
         for (int i = 0; i < N_POINTS; ++i)
         {
             uint16_t x_adc = p[i*2];
             uint16_t y_adc = p[i*2 + 1];
-						if (i < 5) {
-                printf("ADC Raw: x=%u, y=%u\r\n", x_adc, y_adc);
-            }
             Lissajous_Point_Config(&points[i], x_adc, y_adc);
-						if (i < 5) {
-                printf("Screen Coords: x_label=%u, y_label=%u\r\n", points[i].x_label, points[i].y_label);
-            }
             dot_xy[i*2]     = points[i].x_label;
             dot_xy[i*2 + 1] = points[i].y_label;
         }
 
         if (++frame_skip >= UPDATE_INTERVAL) {
             frame_skip = 0;
-						printf("--- Drawing Frame ---\r\n");
 
-						SetScreenUpdateEnable(0); // 禁止屏幕更新
+            SetScreenUpdateEnable(0); // 禁止屏幕更新
 
             // 设置前景色为淡黄色
             uint16_t bg_color = ((255 >> 3) << 11) | ((255 >> 2) << 5) | (204 >> 3); // RGB565
@@ -88,9 +78,10 @@ void Lissajous_Graph_Display(uint16_t state)
             GUI_RectangleFill(X_SCREEN_MIN, Y_SCREEN_MIN, X_SCREEN_MAX, Y_SCREEN_MAX);
             // 设置前景色为黑色
             SetFcolor(0x0000);
-            GUI_ConDots(0, dot_xy, N_POINTS);
+            // 关键改动：使用能正常工作的绘图指令
+            GUI_FcolorConDots(dot_xy, N_POINTS);
 						
-						SetScreenUpdateEnable(1); // 允许屏幕更新，将之前所有绘图操作一次性显示
+            SetScreenUpdateEnable(1); // 允许屏幕更新，将之前所有绘图操作一次性显示
         }
     }
 }
@@ -158,23 +149,4 @@ void Phase_Detect(float *phase_val)
 DONE:
     /* 标记本帧已消费，让后续绘图 / 检测处理下一帧 */
     tail = (tail + 1) & 3;
-}
-
-void Lissajous_Graph_Test(void)
-{
-    /* 只取 20 个测试点作验证 */
-    uint16_t test_xy[40] = {
-        250,300, 300,350, 350,400, 400,450, 450,500,
-        500,550, 550,500, 600,450, 650,400, 700,350,
-        750,300, 800,250, 850,200, 900,150, 950,100,
-        1000,50, 900,50, 800,50, 700,50, 600,50
-    };
-
-    SetScreenUpdateEnable(0);
-    SetFcolor(0xFFE0);               // 黄色
-    GUI_RectangleFill(250,30,1000,570);
-    SetFcolor(0xF800);               // 红色
-    // GUI_ConDots(1, test_xy, 20);     // mode=1 只画点
-    GUI_FcolorConDots(test_xy, 20); // 使用替代指令 0x68
-    SetScreenUpdateEnable(1);
 }

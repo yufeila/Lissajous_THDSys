@@ -44,6 +44,5 @@ void Lissajous_Graph_Start(void);
 void Lissajous_Graph_Stop(void);
 void Lissajous_Graph_Display(uint16_t state);
 void Phase_Detect(float *phase_val);
-void Lissajous_Graph_Test(void);
 
 #endif
