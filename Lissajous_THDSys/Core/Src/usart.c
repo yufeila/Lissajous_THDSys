@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
-#include "./serial_screen/cmd_queue.h"
 
 /* USER CODE BEGIN 0 */
 #include <stdio.h>

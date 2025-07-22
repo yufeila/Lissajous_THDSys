@@ -15,20 +15,21 @@
 #define KVCO 1
 
 #define HC161N_P0_PIN           GPIO_PIN_1
-#define HC161N_P0_PORT          GPIO_A
+#define HC161N_P0_PORT          GPIOA
 #define HC161N_P1_PIN           GPIO_PIN_2
-#define HC161N_P1_PORT          GPIO_A
+#define HC161N_P1_PORT          GPIOA
 #define HC161N_P2_PIN           GPIO_PIN_3
-#define HC161N_P2_PORT          GPIO_A
+#define HC161N_P2_PORT          GPIOA
 #define HC161N_P3_PIN           GPIO_PIN_4
-#define HC161N_P3_PORT          GPIO_A
+#define HC161N_P3_PORT          GPIOA
 
 #define CD4052_A_PIN           GPIO_PIN_5
-#define CD4052_A_PORT          GPIO_A
+#define CD4052_A_PORT          GPIOB
 #define CD4052_B_PIN           GPIO_PIN_6
-#define CD4052_B_PORT          GPIO_A
+#define CD4052_B_PORT          GPIOB
 
 #define CD4053_A_PIN           GPIO_PIN_5
+#define CD4053_A_PORT		   GPIOC
 
 #define P0(STATE) HAL_GPIO_WritePin(HC161N_P0_PORT, HC161N_P0_PIN, (GPIO_PinState)(STATE))
 #define P1(STATE) HAL_GPIO_WritePin(HC161N_P1_PORT, HC161N_P1_PIN, (GPIO_PinState)(STATE))
@@ -42,6 +43,10 @@
 
 
 void SetPLLMultiply(uint16_t ppl_value);
+void Set_Prescaler(uint16_t prescaler_value);
+void HC161N_Init(void);
+void CD4052_Init(void);
+void CD4053_Init(void);
 
 #endif
 

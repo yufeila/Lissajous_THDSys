@@ -22,35 +22,164 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 F:\Course_Project\school_contest\code\stm32f407\Lissajous_THDSys\MDK-ARM\Lissajous_THDSys.uvprojx
-Project File Date:  07/21/2025
+Project File Date:  07/22/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
 Build target 'Lissajous_THDSys'
+assembling startup_stm32f407xx.s...
+compiling stm32f4xx_ll_adc.c...
+compiling adc.c...
+../Core/Src/adc.c(397): error:  #247: function "HAL_ADC_ConvCpltCallback"  has already been defined
+  void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
+../Core/Src/adc.c: 0 warnings, 1 error
+compiling dma.c...
+compiling stm32f4xx_hal_msp.c...
+compiling tim.c...
+compiling stm32f4xx_hal_adc.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_rcc_ex.c...
 compiling main.c...
-../Users/./serial_screen/hmi_driver.h(73): warning:  #1295-D: Deprecated declaration GUI_CleanScreen - give arg types
-  void GUI_CleanScreen();
-../Users/./serial_screen/hmi_driver.h(270): warning:  #1295-D: Deprecated declaration CalibrateTouchPane - give arg types
-  void	CalibrateTouchPane();
-../Users/./serial_screen/hmi_driver.h(275): warning:  #1295-D: Deprecated declaration TestTouchPane - give arg types
-  void TestTouchPane();
 ../Users/./serial_screen/hmi_driver.h(336): warning:  #1295-D: Deprecated declaration GetScreen - give arg types
   void GetScreen();
-../Users/./serial_screen/hmi_driver.h(610): warning:  #1295-D: Deprecated declaration BatchEnd - give arg types
-  void BatchEnd();
-../Users/./serial_screen/hmi_driver.h(706): warning:  #1295-D: Deprecated declaration FlashEndSaveControl - give arg types
-  void FlashEndSaveControl();
-../Users/./serial_screen/serial_screen.h(19): warning:  #1-D: last line of file ends without a newline
+../Core/Src/main.c: 1 warning, 0 errors
+compiling stm32f4xx_hal_adc_ex.c...
+compiling stm32f4xx_it.c...
+compiling gpio.c...
+compiling dac.c...
+compiling usart.c...
+../Core/Src/usart.c(301): warning:  #223-D: function "queue_push" declared implicitly
+  			queue_push(rxBuf[i]);
+../Core/Src/usart.c: 1 warning, 0 errors
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_exti.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_dac.c...
+compiling stm32f4xx_hal_dac_ex.c...
+compiling stm32f4xx_hal_tim.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling serial_screen.c...
+../Users/./serial_screen/hmi_driver.h(336): warning:  #1295-D: Deprecated declaration GetScreen - give arg types
+  void GetScreen();
+..\Users\serial_screen\serial_screen.c(169): warning:  #223-D: function "PlayMusic" declared implicitly
+          PlayMusic(buffer);                                                           //播放音乐
+..\Users\serial_screen\serial_screen.c(192): warning:  #223-D: function "Lissajous_Graph_Display" declared implicitly
+          Lissajous_Graph_Display(lissajous_graph_state);
+..\Users\serial_screen\serial_screen.c(192): error:  #20: identifier "lissajous_graph_state" is undefined
+          Lissajous_Graph_Display(lissajous_graph_state);
+..\Users\serial_screen\serial_screen.c(197): warning:  #223-D: function "Phase_Detect" declared implicitly
+              Phase_Detect(&phase_value);
+..\Users\serial_screen\serial_screen.c(223): warning:  #223-D: function "MeasureDuty" declared implicitly
+          MeasureDuty(&measured_duty);
+..\Users\serial_screen\serial_screen.c(225): warning:  #223-D: function "snprintf" declared implicitly
+          snprintf(duty_str, sizeof(duty_str), "%.1f%%", measured_duty * 100.0f);
+..\Users\serial_screen\serial_screen.c(232): warning:  #223-D: function "MeasureTHD" declared implicitly
+          MeasureTHD(&measured_thd);
+..\Users\serial_screen\serial_screen.c(234): warning:  #223-D: function "snprintf" declared implicitly
+          snprintf(thd_str, sizeof(thd_str), "%.1f%%", measured_thd);
+..\Users\serial_screen\serial_screen.c(245): warning:  #223-D: function "Lissajous_Graph_Start" declared implicitly
+          Lissajous_Graph_Start();
+..\Users\serial_screen\serial_screen.c(250): warning:  #223-D: function "Lissajous_Graph_Stop" declared implicitly
+          Lissajous_Graph_Stop();
+..\Users\serial_screen\serial_screen.c(273): warning:  #223-D: function "sscanf" declared implicitly
+          sscanf((const char*)str, "%f", &duty_value);
+..\Users\serial_screen\serial_screen.c(277): warning:  #223-D: function "SetDuty" declared implicitly
+          SetDuty((uint16_t)duty_value);
+..\Users\serial_screen\serial_screen.c(285): warning:  #223-D: function "sscanf" declared implicitly
+          sscanf((const char*)str, "%d", &ppl_value);
+..\Users\serial_screen\serial_screen.c(286): warning:  #223-D: function "SetPLLMultiply" declared implicitly
+          SetPLLMultiply((uint16_t)ppl_value);
+..\Users\serial_screen\serial_screen.c(410): warning:  #1-D: last line of file ends without a newline
+  }
+..\Users\serial_screen\serial_screen.c(394): warning:  #550-D: variable "years"  was set but never used
+      uint8 years;
+..\Users\serial_screen\serial_screen.c(395): warning:  #550-D: variable "months"  was set but never used
+      uint8 months;
+..\Users\serial_screen\serial_screen.c(396): warning:  #550-D: variable "weeks"  was set but never used
+      uint8 weeks;
+..\Users\serial_screen\serial_screen.c(397): warning:  #550-D: variable "days"  was set but never used
+      uint8 days;
+..\Users\serial_screen\serial_screen.c(398): warning:  #550-D: variable "hours"  was set but never used
+      uint8 hours;
+..\Users\serial_screen\serial_screen.c(399): warning:  #550-D: variable "minutes"  was set but never used
+      uint8 minutes;
+..\Users\serial_screen\serial_screen.c(400): warning:  #550-D: variable "sec"  was set but never used
+      uint8 sec;
+..\Users\serial_screen\serial_screen.c(28): warning:  #177-D: variable "test_value"  was declared but never referenced
+  static int32 test_value = 0;                                                         //测试值
+..\Users\serial_screen\serial_screen.c(29): warning:  #177-D: variable "update_en"  was declared but never referenced
+  static uint8 update_en = 0;                                                          //更新标记
+..\Users\serial_screen\serial_screen.c(33): warning:  #177-D: variable "duty_set"  was declared but never referenced
+  static uint16_t duty_set = 0;
+..\Users\serial_screen\serial_screen.c: 25 warnings, 1 error
+compiling key.c...
+compiling cmd_queue.c...
+..\Users\serial_screen\hmi_driver.h(336): warning:  #1295-D: Deprecated declaration GetScreen - give arg types
+  void GetScreen();
+..\Users\serial_screen\cmd_queue.c(102): warning:  #1-D: last line of file ends without a newline
+  }
+..\Users\serial_screen\cmd_queue.c: 2 warnings, 0 errors
+compiling ppl.c...
+..\Users\ppl\ppl.c(153): warning:  #1-D: last line of file ends without a newline
+  }
+..\Users\ppl\ppl.c: 1 warning, 0 errors
+compiling duty_set.c...
+../Users/./duty/duty_set.h(20): warning:  #1-D: last line of file ends without a newline
   #endif
-../Core/Src/main.c(135): warning:  #223-D: function "UpdateUI" declared implicitly
-            UpdateUI();
-../Core/Src/main.c: 8 warnings, 0 errors
-linking...
-Lissajous_THDSys\Lissajous_THDSys.axf: Error: L6218E: Undefined symbol size (referred from main.o).
-Not enough information to list image symbols.
-Not enough information to list load addresses in the image map.
-Finished: 2 information, 0 warning and 1 error messages.
-"Lissajous_THDSys\Lissajous_THDSys.axf" - 1 Error(s), 8 Warning(s).
+..\Users\duty\duty_set.c(15): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      float Vref = DDS_OUT_VPP * (1 - fduty);
+..\Users\duty\duty_set.c: 2 warnings, 0 errors
+compiling system_stm32f4xx.c...
+compiling bsp_ad9833.c...
+..\Users\ad9833\bsp_ad9833.c(222): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      uint32_t freq = (uint32_t)(fout * 268435456.0 / FCLK); // 28-bit
+..\Users\ad9833\bsp_ad9833.c: 1 warning, 0 errors
+compiling fft_hp_estimate.c...
+..\Users\fft_hp_estimate\fft_hp_estimate.c(27): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              win[n] = 0.5f * (1.0f - cosf(2.0f * PI_F * n / (N_RAW-1)));
+..\Users\fft_hp_estimate\fft_hp_estimate.c: 1 warning, 0 errors
+compiling lissajous_graph.c...
+../Users/./serial_screen/hmi_driver.h(336): warning:  #1295-D: Deprecated declaration GetScreen - give arg types
+  void GetScreen();
+../Users/./lissajous_graph/lissajous_graph.h(39): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Users\lissajous_graph\lissajous_graph.c(104): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "idx_y1"  (declared at line 107)
+            variable "idx_y2"  (declared at line 116)
+            variable "diff"  (declared at line 125)
+            variable "period"  (declared at line 126)
+      if (idx_x1 < 0) goto DONE;  // 本帧未找到 X 上升
+                      ^
+..\Users\lissajous_graph\lissajous_graph.c(113): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "idx_y2"  (declared at line 116)
+            variable "diff"  (declared at line 125)
+            variable "period"  (declared at line 126)
+      if (idx_y1 < 0) goto DONE;  // 本帧未找到 Y 上升
+                      ^
+..\Users\lissajous_graph\lissajous_graph.c(122): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "diff"  (declared at line 125)
+            variable "period"  (declared at line 126)
+      if (idx_y2 < 0) goto DONE;  // 本帧未找到完整周期
+                      ^
+..\Users\lissajous_graph\lissajous_graph.c(136): warning:  #1-D: last line of file ends without a newline
+  }
+..\Users\lissajous_graph\lissajous_graph.c: 6 warnings, 0 errors
+compiling hmi_driver.c...
+..\Users\serial_screen\hmi_driver.h(336): warning:  #1295-D: Deprecated declaration GetScreen - give arg types
+  void GetScreen();
+..\Users\serial_screen\hmi_driver.c(2000): warning:  #1-D: last line of file ends without a newline
+  }
+..\Users\serial_screen\hmi_driver.c: 2 warnings, 0 errors
+compiling stm32f4xx_hal_uart.c...
+"Lissajous_THDSys\Lissajous_THDSys.axf" - 2 Error(s), 42 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -74,7 +203,7 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE@6.1.0
       Include file:  CMSIS/Core/Include/tz_context.h
 Target not created.
-Build Time Elapsed:  00:00:10
+Build Time Elapsed:  00:05:19
 </pre>
 </body>
 </html>

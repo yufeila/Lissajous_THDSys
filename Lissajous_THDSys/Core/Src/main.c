@@ -24,7 +24,6 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "fsmc.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -103,7 +102,6 @@ int main(void)
   MX_DMA_Init();
   MX_ADC1_Init();
   MX_USART1_UART_Init();
-  MX_FSMC_Init();
   MX_TIM2_Init();
   MX_USART3_UART_Init();
   MX_ADC2_Init();

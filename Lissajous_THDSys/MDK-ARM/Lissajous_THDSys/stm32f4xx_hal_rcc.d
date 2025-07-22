@@ -30,8 +30,6 @@ lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f
 lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
-lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
-lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lissajous_thdsys\stm32f4xx_hal_rcc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h

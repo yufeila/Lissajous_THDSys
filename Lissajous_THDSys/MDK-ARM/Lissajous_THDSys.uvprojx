@@ -425,11 +425,6 @@
               <FilePath>../Core/Src/dma.c</FilePath>
             </File>
             <File>
-              <FileName>fsmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/fsmc.c</FilePath>
-            </File>
-            <File>
               <FileName>tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/tim.c</FilePath>
@@ -545,16 +540,6 @@
               <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dac_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_ll_fsmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_sram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_hal_tim.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c</FilePath>
@@ -659,7 +644,30 @@
               <FileType>5</FileType>
               <FilePath>..\Users\duty\duty_set.h</FilePath>
             </File>
+            <File>
+              <FileName>lissajous_graph.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Users\lissajous_graph\lissajous_graph.c</FilePath>
+            </File>
+            <File>
+              <FileName>lissajous_graph.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Users\lissajous_graph\lissajous_graph.h</FilePath>
+            </File>
+            <File>
+              <FileName>ppl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Users\ppl\ppl.c</FilePath>
+            </File>
+            <File>
+              <FileName>ppl.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Users\ppl\ppl.h</FilePath>
+            </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
           <GroupName>Middlewares/Library/DSP Library/DSP Library</GroupName>
@@ -758,9 +766,6 @@
               </FileOption>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>

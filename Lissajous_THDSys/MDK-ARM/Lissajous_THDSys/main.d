@@ -31,8 +31,6 @@ lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac_e
 lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
-lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
-lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lissajous_thdsys\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
@@ -50,7 +48,6 @@ lissajous_thdsys\main.o: ../Core/Inc/dac.h
 lissajous_thdsys\main.o: ../Core/Inc/dma.h
 lissajous_thdsys\main.o: ../Core/Inc/usart.h
 lissajous_thdsys\main.o: ../Core/Inc/gpio.h
-lissajous_thdsys\main.o: ../Core/Inc/fsmc.h
 lissajous_thdsys\main.o: ../Users/./ad9833/bsp_ad9833.h
 lissajous_thdsys\main.o: ../Users/./serial_screen/serial_screen.h
 lissajous_thdsys\main.o: ../Users/./serial_screen/hmi_driver.h

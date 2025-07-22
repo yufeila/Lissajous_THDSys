@@ -32,13 +32,9 @@ lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dac_
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
-lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
-lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lissajous_thdsys\usart.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-lissajous_thdsys\usart.o: ../Users/./serial_screen/cmd_queue.h
-lissajous_thdsys\usart.o: ../Users/./serial_screen/hmi_driver.h
 lissajous_thdsys\usart.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
