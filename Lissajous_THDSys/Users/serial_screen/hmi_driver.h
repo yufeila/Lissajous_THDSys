@@ -359,6 +359,7 @@ void SetScreenUpdateEnable(uint8 enable);
  *  \param  focus 是否具有输入焦点
  */
 void SetControlFocus(uint16 screen_id,uint16 control_id,uint8 focus);
+void GUI_FcolorConDots(uint16 *dot,uint16 dot_cnt);
 
 /*! 
  *  \brief     显示\隐藏控件
