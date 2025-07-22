@@ -134,11 +134,7 @@ float Phase_Detect_Logic(uint16_t* p, int num_points)
     for (int i = 1; i < num_points; ++i)
     {
         uint16_t a = p[(i-1)*2], b = p[i*2];
-        if ( (a < mid_x && b >= mid_x) ||   // 上升
-             (a > mid_x && b <= mid_x) )    // 下降
-        {
-            idx_x1 = i; break;
-        }
+        if (a < mid_x && b >= mid_x) { idx_x1 = i; break; }
     }
     if (idx_x1 < 0) return -1.0f; // 未找到 X 上升
 
@@ -184,14 +180,18 @@ void Phase_Detect_Test(float expected_phase_deg)
     uint16_t test_buffer[N_POINTS * 2];
     const float PI = 3.1415926535f;
 
-    // 生成满足条件的测试数据：用 sin 波
+    // 生成模拟数据
+    // X: cos(t)
+    // Y: cos(t - phase)
     for (int i = 0; i < N_POINTS; i++)
     {
-        float angle_rad_x = 2 * PI * i / N_POINTS          - PI/2;              // sin 起点 -1 → +1
-        float angle_rad_y = 2 * PI * i / N_POINTS - PI/2 - (expected_phase_deg * PI / 180.0f);
+        float angle_rad_x = 2 * PI * i / N_POINTS;
+        float angle_rad_y = 2 * PI * i / N_POINTS - (expected_phase_deg * PI / 180.0f);
 
-        test_buffer[i*2]     = (uint16_t)((sinf(angle_rad_x) + 1.0f) * 2047.5f);
-        test_buffer[i*2 + 1] = (uint16_t)((sinf(angle_rad_y) + 1.0f) * 2047.5f);
+        // 映射到 [0, 4095] 的 ADC 值范围
+        // (cos(x) + 1) * 2047.5
+        test_buffer[i*2]     = (uint16_t)((cosf(angle_rad_x) + 1.0f) * 2047.5f);
+        test_buffer[i*2 + 1] = (uint16_t)((cosf(angle_rad_y) + 1.0f) * 2047.5f);
     }
     
     // 调用核心逻辑进行计算
