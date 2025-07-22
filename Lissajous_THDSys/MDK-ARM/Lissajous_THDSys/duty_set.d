@@ -40,3 +40,4 @@ lissajous_thdsys\duty_set.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_u
 lissajous_thdsys\duty_set.o: ../Users/./ad9833/bsp_ad9833.h
 lissajous_thdsys\duty_set.o: ../Core/Inc/dac.h
 lissajous_thdsys\duty_set.o: ../Core/Inc/tim.h
+lissajous_thdsys\duty_set.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h

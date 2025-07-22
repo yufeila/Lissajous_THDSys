@@ -2,7 +2,7 @@
 #include "dac.h" // 确保包含了 DAC 相关头文件
 #include "tim.h" // 确保包含了 TIM 相关头文件
 #include "./ad9833/bsp_ad9833.h"
-
+#include <stdio.h>
 
 extern DAC_HandleTypeDef hdac; // DAC 句柄，通常在 dac.c 里定义
 extern TIM_HandleTypeDef htim4; // TIM4 句柄，通常在 tim.c 里定义
@@ -11,7 +11,7 @@ extern float duty; // tim.c 里定义的
 
 void SetDuty(uint16_t duty)
 {
-    printf("SetDuty: duty = %.2f%%\r\n", duty);
+    printf("SetDuty: duty = %.2f%%\r\n", (float)duty);
     float fduty = (float)duty / 100.0f;
     float Vref = DDS_OUT_VPP * (1 - fduty);
 
